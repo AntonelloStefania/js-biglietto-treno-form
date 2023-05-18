@@ -35,8 +35,9 @@ submit_button.addEventListener('click', function(){
         document.getElementById("carrozza").innerHTML = `carrozza numero: ${carrozza}`;
         document.getElementById("cp").innerHTML = `${cp}`;
     } else{
-        alert('è necessario inserire valori validi')
+        alert('è necessario inserire valori validi');
     }
+    
 })
 
 
