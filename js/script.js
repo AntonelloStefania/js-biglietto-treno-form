@@ -3,7 +3,6 @@ const tariffa = 0.21;
 let submit_button = document.getElementById('submit_button');
 
 submit_button.addEventListener('click', function(){
-    
     let km = document.getElementById('km').value;
     
     let carrozza = Math.floor(Math.random() * 10 +1);
@@ -24,8 +23,8 @@ submit_button.addEventListener('click', function(){
     } else{
         alert('è necessario inserire valori validi');
     }
-    document.getElementById("nome-utente").innerHTML =document.getElementById('name').value;
-    document.getElementById("tipo-biglietto").innerHTML = document.getElementById('eta').value;
+    document.getElementById("nome-utente").innerHTML = document.getElementById('name').value;
+    document.getElementById("tipo-biglietto").innerHTML = eta;
     document.getElementById("carrozza").innerHTML = `carrozza numero: ${carrozza}`;
     document.getElementById("cp").innerHTML = `${cp}`;
 })
