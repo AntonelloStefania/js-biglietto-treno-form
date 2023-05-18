@@ -1,35 +1,41 @@
 const tariffa = 0.21;
 
 let submit_button = document.getElementById('submit_button');
-console.log(submit_button);
 
 submit_button.addEventListener('click', function(){
     let nome_utente = document.getElementById('name').value;
-    console.log(nome_utente);
     
     let km = document.getElementById('km').value;
-    console.log(km);
-    
+
+    let carrozza = Math.floor(Math.random() * 10 +1);
+
+    let cp = Math.floor(Math.random() * 100000 +1);
+
     let eta = document.getElementById('eta').value;
-    console.log(eta)
-    if (eta == 'under 18'){
+    
+    if (eta == 'under 18' && km > 0){
         let price = (km * tariffa) * 0.8;
-        console.log(price)
         document.getElementById("nome-utente").innerHTML = `${nome_utente}`;
         document.getElementById("tipo-biglietto").innerHTML = `${eta}`;
-        document.getElementById("costo-biglietto").innerHTML = `${price}`
-    } else if (eta == 'over 65'){
+        document.getElementById("costo-biglietto").innerHTML = `${price.toFixed(2)}€`;
+        document.getElementById("carrozza").innerHTML = `carrozza numero: ${carrozza}`;
+        document.getElementById("cp").innerHTML = `${cp}`;
+    } else if (eta == 'over 65' && km > 0){
         let price = (km * tariffa) * 0.4;
-        console.log(price);
         document.getElementById("nome-utente").innerHTML = `${nome_utente}`;
         document.getElementById("tipo-biglietto").innerHTML = `${eta}`;
-        document.getElementById("costo-biglietto").innerHTML = `${price}`
-    } else if (eta == 'standard') {
+        document.getElementById("costo-biglietto").innerHTML = `${price.toFixed(2)}€`;
+        document.getElementById("carrozza").innerHTML = `carrozza numero: ${carrozza}`;
+        document.getElementById("cp").innerHTML = `${cp}`;
+    } else if (eta == 'standard' && km > 0) {
         let price = km * tariffa;
-        console.log(price)
         document.getElementById("nome-utente").innerHTML = `${nome_utente}`;
         document.getElementById("tipo-biglietto").innerHTML = `${eta}`;
-        document.getElementById("costo-biglietto").innerHTML = `${price}`
+        document.getElementById("costo-biglietto").innerHTML = `${price.toFixed(2)}€`;
+        document.getElementById("carrozza").innerHTML = `carrozza numero: ${carrozza}`;
+        document.getElementById("cp").innerHTML = `${cp}`;
+    } else{
+        alert('è necessario inserire valori validi')
     }
 })
 

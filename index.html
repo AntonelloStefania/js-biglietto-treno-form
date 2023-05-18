@@ -11,50 +11,54 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row mt-5">
-                <div class="col-12">
+            <div class="row py-5 background">
+                <div class="col-12 d-flex justify-content-center mt-5">
                     <form>
                         <div class="form-group d-inline-flex">
-                          <label class="d-block" for="name">Nome</label>
+                          <label class="badge bg-danger ms-4 me-2 pt-2 fs-4 rounded-pill" for="name">Nome</label>
                           <input type="text" class="form-control name" id="name"  placeholder="inserisci il tuo nome">
                         </div>
                         <div class="form-group d-inline-flex">
-                            <label class="d-block" for="name">Lunghezza tratta</label>
+                            <label class="badge bg-danger ms-4 me-2 pt-2 fs-4 rounded-pill" for="name">Lunghezza tratta</label>
                             <input type="number" class="form-control km" id="km"  placeholder="Quanti km devi percorrere?">
                         </div>
                         <div class="form-group d-inline-flex">
-                            <label for="eta">Tipo di biglietto</label>
+                            <label for="eta" class="badge bg-danger ms-4 me-2 pt-2 fs-4 rounded-pill">Tariffa</label>
                             <select class="form-control eta" id="eta">
                                 <option>standard</option>
                                 <option>under 18</option>
                                 <option>over 65</option>
                             </select>
                         </div>
-                        <div>
-                            <button type="button" class="btn btn-outline-secondary" id="submit_button">Conferma</button>
-                            <input type="reset" class="btn btn-outline-secondary" id="delete_button"></input>
+                        <div class="d-flex justify-content-center mt-4">
+                            <button type="button" class="btn btn-outline-danger btn-lg m-3" id="submit_button">Conferma</button>
+                            <input type="reset" class="btn btn-outline-danger btn-lg m-3" id="delete_button"></input>
                         </div>
                     </form>
                 </div>
-                <div class="col-12">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Nome Passeggero</th>
-                            <th scope="col">Offerta</th>
-                            <th scope="col">Carrozza</th>
-                            <th scope="col">Costo Biglietto</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td id="nome-utente"></td>
-                            <td id="tipo-biglietto"></td>
-                            <td>3</td>
-                            <td id="costo-biglietto"></td>
-                          </tr>
-                        </tbody>
-                    </table>
+                <div class="col-12 mt-5">
+                    <div class="card col-auto col-8 offset-2 border-black bg-danger">
+                        <table class="table border-black">
+                            <thead class="card-header text-white border-black">
+                              <tr>
+                                <th scope="col">Nome Passeggero</th>
+                                <th scope="col">Offerta</th>
+                                <th scope="col">Carrozza</th>
+                                <th scope="col">CP</th>
+                                <th scope="col">Costo Biglietto</th>
+                              </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                              <tr>
+                                <td id="nome-utente"></td>
+                                <td id="tipo-biglietto"></td>
+                                <td id="carrozza"></td>
+                                <td id="cp"></td>
+                                <td id="costo-biglietto"></td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
