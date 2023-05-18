@@ -5,7 +5,7 @@ let submit_button = document.getElementById('submit_button');
 submit_button.addEventListener('click', function(){
     let km = document.getElementById('km').value;
     
-    let carrozza = Math.floor(Math.random() * 10 +1);
+    let carrozza =`Carrozza Numero ${ Math.floor(Math.random() * 10 +1)}`;
 
     let cp = Math.floor(Math.random() * 100000 +1);
 
@@ -22,10 +22,13 @@ submit_button.addEventListener('click', function(){
         document.getElementById("costo-biglietto").innerHTML = `${price.toFixed(2)}€`;
     } else{
         alert('è necessario inserire valori validi');
+        carrozza = ''
+        cp = ''
+        eta = ''
     }
     document.getElementById("nome-utente").innerHTML = document.getElementById('name').value;
     document.getElementById("tipo-biglietto").innerHTML = eta;
-    document.getElementById("carrozza").innerHTML = `carrozza numero: ${carrozza}`;
+    document.getElementById("carrozza").innerHTML = carrozza;
     document.getElementById("cp").innerHTML = `${cp}`;
 })
 
