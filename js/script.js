@@ -1,7 +1,6 @@
 const tariffa = 0.21;
 
 let submit_button = document.getElementById('submit_button');
-
 submit_button.addEventListener('click', function(){
     let km = document.getElementById('km').value;
     
@@ -22,9 +21,10 @@ submit_button.addEventListener('click', function(){
         document.getElementById("costo-biglietto").innerHTML = `${price.toFixed(2)}€`;
     } else{
         alert('è necessario inserire valori validi');
-        carrozza = ''
-        cp = ''
-        eta = ''
+        carrozza = '';
+        cp = '';
+        eta = '';
+        document.getElementById("costo-biglietto").innerHTML = ``;
     }
     document.getElementById("nome-utente").innerHTML = document.getElementById('name').value;
     document.getElementById("tipo-biglietto").innerHTML = eta;
